@@ -1,8 +1,7 @@
-class UndoRedoManager extends EventTarget
+class UndoRedoManager
 {
-    constructor()
+    constructor(limit, undoCb, redoCb)
     {
-        super(limit, undoCb, redoCb);
         this.limit = limit;
         this.stkUndo = [];
         this.stkRedo = [];
